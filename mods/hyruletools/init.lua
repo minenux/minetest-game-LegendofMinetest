@@ -2781,7 +2781,7 @@ minetest.register_entity("hyruletools:fireball", {
 								local p = {x=pos.x+dx, y=pos.y, z=pos.z+dz}
 								local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 								local n = minetest.env:get_node(p).name
-								if n ~= "hyruletools:fireball" and n ~="default:dirt_with_grass" and n ~="default:dirt_with_dry_grass" and n ~="default:stone"  then	
+								if n ~= "hyruletools:fireball" and n ~="default:dirt_with_grass" and n ~="default:dirt_with_dry_grass" and n ~="default:stone" and n ~= nil then	
 									if minetest.registered_nodes[n].groups.flammable then
 										minetest.env:set_node(t, {name="fire:basic_flame"})
 									self.object:remove()
